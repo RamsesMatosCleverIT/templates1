@@ -1,0 +1,15 @@
+name: Install Dependencies
+on:
+  workflow_dispatch:
+    inputs:
+      language:
+        description: 'Programming language'
+        required: true
+jobs:
+  install-dependencies:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Install dependencies
+      uses: ./${{ github.event.inputs.language }}.yml
