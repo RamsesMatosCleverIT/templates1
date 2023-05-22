@@ -18,4 +18,4 @@ on:
 
 jobs:
     install-dependencies:
-        uses: .github/.workflows/action${{ github.event.inputs.language }}.yml@main
+        uses: RamsesMatosCleverIT/Actions1/.github/.workflows/actionJava.yml@main
